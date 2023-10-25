@@ -1,21 +1,48 @@
-@keyframes color{
-    0%  { background: #e710a7 ;}
-    20% { background:#9c06e7   ;}
-    40% { background:#09acec;}
-    60% { background: #0de04c  ;}
-    80% { background: #12c7e3 ;}
-    100%{ background: #e710a7 ;}
-
-}
 body{
-    background: #e710a7;
-    animation: color 9s infinite linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding:20px;
 }
-h1{
-    text-align: center;
+
+div h1{
     font-family: "Kavoon", sans-serif;
-    font-size: 30px;
-    color:aliceblue;
+    font-size: 50px;
+    width: fit-content;
+    letter-spacing: 2px;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(135deg,#e710a7, #9c06e7, #09acec,#0de04c, #12c7e3, #e710a7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: gradient 5s ease-in-out infinite;
 }
+
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    max-width: 50vh;
+}
+
